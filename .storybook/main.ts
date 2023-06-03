@@ -32,6 +32,7 @@ const config: StorybookConfig = {
     config.module.rules.push({
       resolve: {
         alias: {
+          '/fonts': path.resolve(__dirname, '../public/fonts/'),
           '@style': path.resolve(__dirname, '../src/styles/'),
         },
       },

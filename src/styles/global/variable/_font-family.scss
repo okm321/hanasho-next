@@ -2,7 +2,7 @@
  * @file - フォントの変数を管理する
  */
 @font-face {
-  font-family: 'reggae';
-  // src: url("@/assets/fonts/ReggaeOne-Regular.ttf");
+  font-family: 'base';
+  src: url('/fonts/AP-OTF-ShueiGoGinStdN-M.woff');
 }
-$font-normal: 'reggae';
+$font-normal: 'base';

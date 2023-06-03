@@ -13,7 +13,7 @@ import Style from './HeaderButton.module.scss'
 // }
 
 export const HeaderButtonInner: FC = () => {
-  return <div className={Style.buttonItem__text}>aaa</div>
+  return <div className={Style.buttonItem__text}>トップ</div>
 }
 
 // export const HeaderButtonWrapper: FC<HeaderButtonProps> = ({
