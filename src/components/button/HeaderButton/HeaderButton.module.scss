@@ -1,0 +1,21 @@
+@use '@style/global' as g;
+
+.buttonItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: map-get(g.$spaces, 2);
+  width: 150px;
+  border: 1px solid g.$color-header-button-border;
+  border-radius: map-get(g.$spaces, 1);
+  @include g.bp-less(g.$bp-mobile) {
+    width: 136px;
+    font-size: g.$smallFontSize;
+  }
+  &__img {
+    margin-right: map-get(g.$spaces, 3);
+  }
+  &__text {
+    color: g.$color-global;
+  }
+}
