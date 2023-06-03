@@ -1,16 +1,9 @@
-import type { StorybookConfig } from '@storybook/react-webpack5'
+import type { StorybookConfig } from '@storybook/nextjs'
 const path = require('path')
 
-const sassLoaders = [
-  'style-loader',
-  { loader: 'css-loader', options: { sourceMap: true } },
-  { loader: 'sass-loader', options: { sourceMap: true } },
-]
-
-// Read more: https://storybook.js.org/docs/react/configure/overview
-const storybookConfig: StorybookConfig = {
+const config: StorybookConfig = {
   stories: ['./README.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  staticDirs: ['../public'],
+  staticDirs: ['../public/'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -25,22 +18,12 @@ const storybookConfig: StorybookConfig = {
       },
     },
   ],
-  typescript: {
-    check: true,
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) =>
-        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
-    },
-  },
-  framework: '@storybook/react-webpack5',
-  core: {
-    builder: '@storybook/builder-webpack5',
+  framework: {
+    name: '@storybook/nextjs',
+    options: {},
   },
   docs: {
-    autodocs: true,
-    defaultName: 'Overview',
+    autodocs: 'tag',
   },
   webpackFinal: async (config) => {
     if (config.module?.rules == null) {
@@ -56,5 +39,4 @@ const storybookConfig: StorybookConfig = {
     return config
   },
 }
-
-export default storybookConfig
+export default config

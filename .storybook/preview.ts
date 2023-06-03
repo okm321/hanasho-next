@@ -1,12 +1,10 @@
-import './preview.css'
-import '../src/styles/styles.scss'
+import type { Preview } from '@storybook/react'
+import '@style/styles.scss'
 
-const preview = {
+const preview: Preview = {
   parameters: {
-    // layout: 'fullscreen',
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
-      expanded: true,
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/,
