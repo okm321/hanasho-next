@@ -1,0 +1,8 @@
+coverage
+storybook-static
+node_modules
+.next
+dist
+out
+mockServiceWorker.js
+.scaffdog/*.md
