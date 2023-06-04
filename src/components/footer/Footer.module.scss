@@ -3,8 +3,7 @@
 .footer {
   @include g.maxWidthContent;
   border-top: 1px solid g.$color-footer-border;
-  padding-top: map-get(g.$spaces, 18);
-  margin-bottom: map-get(g.$spaces, 15);
+  padding: map-get(g.$spaces, 18) 0 map-get(g.$spaces, 15);
 }
 
 .footerInfo {
@@ -39,7 +38,7 @@
 
 .footerInfoOpen {
   display: flex;
-  align-items: center;
+  align-items: start;
   &__head {
     margin-right: map-get(g.$spaces, 3);
   }
