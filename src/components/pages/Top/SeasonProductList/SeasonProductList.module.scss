@@ -1,0 +1,16 @@
+@use '@style/global' as g;
+
+.seasonSection {
+  background-color: g.$color-section-bg;
+  padding: map-get(g.$spaces, 25) 0 0;
+}
+
+.seasonSectionList {
+  display: flex;
+  @include g.maxWidthContent;
+  &__card {
+    & + & {
+      margin-left: map-get(g.$spaces, 2);
+    }
+  }
+}

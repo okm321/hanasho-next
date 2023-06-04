@@ -19,6 +19,7 @@ $palette-bright: #fff;
 $palette-dark: #333;
 $palette-gray: #4d4d4d;
 $palette-deepGray: #aaa;
+$palette-lightGray: #f4f4f4;
 
 /*==== Color ====*/
 $color-global: $palette-primary;
@@ -28,3 +29,4 @@ $color-header-button-border: $palette-dark;
 $color-default: $palette-bright;
 $color-footer-border: $palette-deepGray;
 $color-top-title-border: $palette-accent;
+$color-section-bg: $palette-lightGray;

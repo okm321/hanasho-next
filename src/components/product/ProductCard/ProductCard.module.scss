@@ -1,0 +1,34 @@
+@use '@style/global' as g;
+
+.cardBlock {
+  display: flex;
+  flex-direction: column;
+  border-radius: map-get(g.$spaces, 2);
+  border: 1px solid transparent;
+  background-color: g.$color-default;
+  overflow: hidden;
+  &__img {
+    height: 100%;
+  }
+  &__info {
+    padding: map-get(g.$spaces, 4) 5%;
+    color: g.$color-base-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.cardInfo {
+  font-size: g.$smallFontSize;
+  &__subtitle {
+    padding-bottom: map-get(g.$spaces, 6);
+  }
+  &__name {
+    padding-bottom: map-get(g.$spaces, 7);
+  }
+  &__price {
+    text-align: right;
+    font-weight: bold;
+  }
+}
