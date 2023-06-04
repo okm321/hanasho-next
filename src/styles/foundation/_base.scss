@@ -14,7 +14,7 @@ html {
 
 body {
   @include g.font-normal;
-  color: g.$color-base-text;
+  letter-spacing: 0.05em;
 }
 
 @media (hover: hover) {

@@ -1,5 +1,8 @@
 @use '@style/global' as g;
 
 .header {
-  margin: map-get(g.$spaces, 3) 0 map-get(g.$spaces, 16);
+  @include g.maxWidthContent;
+  margin-top: map-get(g.$spaces, 3);
+  margin-bottom: map-get(g.$spaces, 16);
+  color: g.$color-base-text;
 }

@@ -18,6 +18,7 @@ $palette-disabled: #cdcdcd;
 $palette-bright: #fff;
 $palette-dark: #333;
 $palette-gray: #4d4d4d;
+$palette-deepGray: #aaa;
 
 /*==== Color ====*/
 $color-global: $palette-primary;
@@ -25,3 +26,4 @@ $color-global-header-background: $palette-success;
 $color-base-text: $palette-gray;
 $color-header-button-border: $palette-dark;
 $color-default: $palette-bright;
+$color-footer-border: $palette-deepGray;
