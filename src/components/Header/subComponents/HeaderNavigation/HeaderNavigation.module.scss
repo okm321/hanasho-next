@@ -1,0 +1,21 @@
+@use '@style/global' as g;
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 map-get(g.$spaces, 5);
+  width: 96px;
+  &__icon {
+    width: 35px;
+  }
+  &__label {
+    font-size: g.$smallFontSize;
+    font-weight: bold;
+  }
+}

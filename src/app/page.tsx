@@ -1,6 +1,9 @@
-import Image from 'next/image'
-import { HeaderTop } from '@/components/Header/subComponents/HeaderTop'
+import { Header } from '@/components/header'
 
 export default function Home() {
-  return <HeaderTop />
+  return (
+    <header>
+      <Header />
+    </header>
+  )
 }
