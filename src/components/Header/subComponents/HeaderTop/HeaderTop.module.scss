@@ -1,0 +1,45 @@
+@use '@style/global' as g;
+
+.headerTop {
+  padding-bottom: map-get($map: g.$spaces, $key: 16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @include g.maxWidthContent;
+  @include g.bp-less(g.$bp-mobile) {
+    padding-bottom: 0px;
+    flex-direction: column;
+  }
+  &__logo {
+    width: 350px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.headerButton {
+  & + & {
+    margin-left: map-get(g.$spaces, 3);
+  }
+}
+
+.headerSns {
+  display: flex;
+  margin-left: map-get(g.$spaces, 4);
+  &__icon {
+    width: map-get(g.$spaces, 7);
+    @include g.bp-less(g.$bp-mobile) {
+      width: map-get(g.$spaces, 6);
+    }
+
+    &:not(:last-child) {
+      margin-right: map-get(g.$spaces, 4);
+      @include g.bp-less(g.$bp-mobile) {
+        width: map-get(g.$spaces, 2);
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/**
+ * @file - コンテントのmaxWidthを設定する
+ */
+
+/**
+ * コンテントのmaxWidthを設定する
+ * @param $maxWidth - 最大幅（デフォルト: 1100px）
+ */
+@mixin maxWidthContent($maxWidth: 1100px) {
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
