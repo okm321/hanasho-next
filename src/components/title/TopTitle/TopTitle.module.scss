@@ -1,0 +1,13 @@
+@use '@style/global' as g;
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: g.$color-base-text;
+  font-size: g.$xLargeFontSize;
+  margin-bottom: map-get(g.$spaces, 17);
+  &__text {
+    border-bottom: 1px solid g.$color-top-title-border;
+    padding-bottom: map-get(g.$spaces, 4);
+  }
+}
