@@ -1,10 +1,12 @@
-/** 
+/**
  * @file - 変数$を管理する
  * @see - https://yumegori.com/dart-sass-method
  */
 
-@forward "breakpoint";
-@forward "color";
-@forward "font-family";
-@forward "font-size";
-@forward "space";
+@forward 'breakpoint';
+@forward 'color';
+@forward 'font-family';
+@forward 'font-size';
+@forward 'opacity';
+@forward 'space';
+@forward 'transition';

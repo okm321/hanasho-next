@@ -1,6 +1,7 @@
 @use '@style/global' as g;
 
 .buttonItem {
+  $root: &;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,10 +14,40 @@
     font-size: g.$smallFontSize;
   }
   &__img {
+    position: relative;
     margin-right: map-get(g.$spaces, 3);
   }
   &__text {
-    color: g.$color-global;
-    font-size: g.$xxxLargeFontSize;
+    font-size: g.$smallFontSize;
   }
+  &Reverse {
+    background-color: g.$color-header-button-border;
+    color: g.$color-default;
+    #{$root} {
+      &__img {
+        filter: invert(100%);
+      }
+    }
+  }
+}
+
+.icon {
+  width: inherit;
+  height: 26px;
+}
+
+.count {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: g.$xSmallFontSize;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  top: map-get(g.$spaces, 1) * -1;
+  right: map-get(g.$spaces, 2);
+  transform: translateX(100%);
 }

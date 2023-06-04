@@ -16,3 +16,15 @@ body {
   @include g.font-normal;
   color: g.$color-base-text;
 }
+
+@media (hover: hover) {
+  button,
+  a {
+    transition: opacity g.$baseTransition;
+  }
+  button:hover,
+  a:hover {
+    opacity: g.$baseOpacity;
+    transition: opacity g.$baseTransition;
+  }
+}
