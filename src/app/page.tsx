@@ -1,5 +1,5 @@
 import { SeasonProductList } from '@/components/pages'
-import { ProductAPI } from '@/types/product/api'
+import { ProductAPI } from '@/types/product'
 
 export default function Home() {
   const products: ProductAPI[] = [
