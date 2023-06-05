@@ -38,7 +38,7 @@
 
 .footerInfoOpen {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   &__head {
     margin-right: map-get(g.$spaces, 3);
   }

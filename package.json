@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "build-storybook": "storybook build",
-    "dev": "next dev",
+    "dev": "yarn install && next dev",
     "fmtpackagejson": "sort-package-json 'package.json' 'apps/*/package.json' 'packages/*/package.json'",
     "fmtpackagejsoncheck": "yarn fmtpackagejson --check",
     "fmtprettier": "yarn fmtprettierbase --write",

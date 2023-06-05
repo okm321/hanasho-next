@@ -18,7 +18,7 @@ export const SeasonProductList: FC<SeasonProductListProps> = ({ products }) => {
       <ul className={Style.seasonSectionList}>
         {products.map((product) => {
           return (
-            <li className={Style.seasonSectionList__card}>
+            <li key={product.id} className={Style.seasonSectionList__card}>
               <ProductCard
                 key={product.id}
                 image={product.image}
