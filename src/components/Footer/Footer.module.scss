@@ -1,0 +1,87 @@
+@use '@style/global' as g;
+
+.footer {
+  @include g.maxWidthContent;
+  border-top: 1px solid g.$color-footer-border;
+  padding: map-get(g.$spaces, 18) 0 map-get(g.$spaces, 15);
+}
+
+.footerInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  line-height: 2;
+  &__logo {
+    width: 350px;
+  }
+  &__text {
+    font-size: g.$smallFontSize;
+  }
+}
+
+.footerInfoTels {
+  display: flex;
+  justify-content: space-between;
+  &__num {
+    & + & {
+      margin-left: map-get(g.$spaces, 7);
+    }
+  }
+}
+
+.footerInfoOpen {
+  display: flex;
+  &__head {
+    margin-right: map-get(g.$spaces, 3);
+  }
+}
+
+.footerInfoOpen {
+  display: flex;
+  align-items: flex-start;
+  &__head {
+    margin-right: map-get(g.$spaces, 3);
+  }
+  &__data {
+    display: flex;
+  }
+}
+
+.footerInfoSns {
+  display: flex;
+  align-items: center;
+  &__head {
+    margin-right: map-get(g.$spaces, 3);
+  }
+  &__data {
+    display: flex;
+  }
+}
+
+.snsIcon {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  & + & {
+    margin-left: map-get(g.$spaces, 2);
+  }
+}
+
+.footerTerms {
+  margin-top: map-get(g.$spaces, 15);
+  font-size: g.$smallFontSize;
+  display: flex;
+  justify-content: center;
+  &__label {
+    & + & {
+      margin-left: map-get(g.$spaces, 4);
+    }
+  }
+}
+
+.footerCopywriting {
+  font-size: g.$xSmallFontSize;
+  margin-top: map-get(g.$spaces, 7);
+  display: flex;
+  justify-content: center;
+}
