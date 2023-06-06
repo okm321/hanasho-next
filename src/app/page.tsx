@@ -1,34 +1,11 @@
-import { SeasonProductList } from '@/components/pages'
-import { ProductAPI } from '@/types/product'
+import { SeasonableProductList } from './components/SeasonProductList'
+import { TopArticle } from './components/TopArticle'
 
-export default function Home() {
-  const products: ProductAPI[] = [
-    {
-      id: 1,
-      image: '/images/dummy/dummy1.jpeg',
-      name: 'パステルカラーのおまかせ花束',
-      subtitle: '【正午までのご注文で即日発送】パステルカラーのおまかせ花束',
-      price: 3850,
-    },
-    {
-      id: 2,
-      image: '/images/dummy/dummy1.jpeg',
-      name: 'パステルカラーのおまかせ花束',
-      subtitle: '【正午までのご注文で即日発送】パステルカラーのおまかせ花束',
-      price: 3850,
-    },
-    {
-      id: 3,
-      image: '/images/dummy/dummy1.jpeg',
-      name: 'パステルカラーのおまかせ花束',
-      subtitle: '【正午までのご注文で即日発送】パステルカラーのおまかせ花束',
-      price: 3850,
-    },
-  ]
-
+export default async function Home() {
   return (
     <div>
-      <SeasonProductList products={products} />
+      <TopArticle />
+      <SeasonableProductList />
     </div>
   )
 }

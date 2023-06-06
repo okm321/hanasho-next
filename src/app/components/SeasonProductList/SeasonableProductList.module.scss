@@ -1,0 +1,24 @@
+@use '@style/global' as g;
+
+.seasonSection {
+  background-color: g.$color-section-bg;
+  padding: map-get(g.$spaces, 25) 0 map-get(g.$spaces, 25);
+}
+
+.seasonSectionList {
+  @include g.maxWidthContent;
+  &__card {
+    display: flex;
+  }
+}
+
+.pagination {
+  bottom: -1 * map-get(g.$spaces, 5);
+}
+
+.page {
+  background-color: g.$color-slider-pagination-page;
+  &.is-active {
+    background-color: g.$color-slider-pagination-page-active;
+  }
+}
