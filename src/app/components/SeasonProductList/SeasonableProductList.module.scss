@@ -18,7 +18,8 @@
 
 .page {
   background-color: g.$color-slider-pagination-page;
-  &.is-active {
-    background-color: g.$color-slider-pagination-page-active;
-  }
+}
+
+.is-active {
+  background-color: g.$color-slider-pagination-page-active;
 }

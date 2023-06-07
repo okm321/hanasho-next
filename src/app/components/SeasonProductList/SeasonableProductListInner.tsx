@@ -3,11 +3,11 @@
 import { ProductCard } from '@/components/product'
 import { SeasonableProductAPI } from '@/types/product/api'
 import { FC } from 'react'
-import Style from './SeasonableProductList.module.scss'
 import { TopTitle } from '@/components/title'
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import '@splidejs/react-splide/css/core'
+import Style from './SeasonableProductList.module.scss'
 
 type SeasonProductListProps = {
   /** 旬の商品 */
@@ -36,6 +36,7 @@ export const SeasonableProductListInner: FC<SeasonProductListProps> = ({
           classes: {
             pagination: `splide__pagination  ${Style.pagination}`,
             page: `splide__pagination__page ${Style.page}`,
+            isActive: `is-active ${Style.isActive}`,
           },
         }}
         className={Style.seasonSectionList}
