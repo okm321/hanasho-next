@@ -23,7 +23,8 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {
-    autodocs: 'tag',
+    autodocs: true,
+    defaultName: 'Overview',
   },
   webpackFinal: async (config) => {
     if (config.module?.rules == null) {

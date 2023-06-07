@@ -7,28 +7,25 @@
   border: 1px solid transparent;
   background-color: g.$color-default;
   overflow: hidden;
-  &__img {
-    height: 100%;
-  }
-  &__info {
-    padding: map-get(g.$spaces, 4) 5%;
-    color: g.$color-base-text;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  color: g.$color-base-text;
+  justify-content: space-between;
+  &__price {
+    font-size: g.$smallFontSize;
+    text-align: right;
+    font-weight: bold;
+    padding: 0 5% map-get(g.$spaces, 4);
   }
 }
 
 .cardInfo {
-  font-size: g.$smallFontSize;
+  font-size: g.$xSmallFontSize;
+  &__img {
+    height: 100%;
+  }
   &__subtitle {
-    padding-bottom: map-get(g.$spaces, 6);
+    padding: map-get(g.$spaces, 4) 5% 0;
   }
   &__name {
-    padding-bottom: map-get(g.$spaces, 7);
-  }
-  &__price {
-    text-align: right;
-    font-weight: bold;
+    padding: map-get(g.$spaces, 4) 5% map-get(g.$spaces, 8);
   }
 }
