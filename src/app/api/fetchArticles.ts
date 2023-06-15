@@ -6,9 +6,9 @@ import { SlideAPI, SlideAPIRaw } from '@/types'
  * トップの記事スライドを取得する
  */
 export const fetchArticles = () => {
-  return parseRequest<SlideAPIRaw, SlideAPI[]>(
-    customFetch('/api/slides'),
-    (data) => {
+  return parseRequest(
+    customFetch<SlideAPIRaw>('/api/slides'),
+    (data): SlideAPI[] => {
       return data.slide
     }
   )

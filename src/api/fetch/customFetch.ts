@@ -23,10 +23,10 @@ export const fetchWrapper = <T>(request: Promise<Response>): Promise<T> => {
   })
 }
 
-export const customFetch = async (
+export const customFetch = async <T>(
   path: RequestInfo | URL,
   options?: RequestInit
-) => {
+): Promise<T> => {
   const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL
   const basicAuthUsername = process.env.NEXT_PUBLIC_BASIC_AUTH_USERNAME
   const basicAuthPassword = process.env.NEXT_PUBLIC_BASIC_AUTH_PASSWORD
@@ -40,5 +40,5 @@ export const customFetch = async (
     ...options,
   })
 
-  return res
+  return res.json()
 }
