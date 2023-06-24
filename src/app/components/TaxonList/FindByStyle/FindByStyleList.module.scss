@@ -1,0 +1,19 @@
+@use '@style/global' as g;
+
+.styleSection {
+  background-color: g.$color-section-bg;
+  padding: map-get(g.$spaces, 25) 0 map-get(g.$spaces, 25);
+}
+
+.styleList {
+  display: flex;
+  @include g.maxWidthContent;
+  flex-wrap: wrap;
+  &__item {
+    width: 23%;
+    &:not(&:nth-child(4n)) {
+      margin-right: calc(8% / 3);
+    }
+    margin-bottom: map-get(g.$spaces, 8);
+  }
+}

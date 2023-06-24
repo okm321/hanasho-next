@@ -1,4 +1,4 @@
-import { TransitionType } from '@/constants/slide'
+import { TransitionType } from './common'
 
 export type SlideAPI = {
   /** 識別子 */

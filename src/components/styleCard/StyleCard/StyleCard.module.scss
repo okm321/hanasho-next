@@ -1,0 +1,17 @@
+@use '@style/global' as g;
+
+.card {
+  background-color: g.$color-default;
+  display: flex;
+  align-items: center;
+  border-radius: map-get(g.$spaces, 2);
+  overflow: hidden;
+  &__img {
+    width: 36.3%;
+  }
+  &__text {
+    width: 63.7%;
+    font-size: g.$xSmallFontSize;
+    text-align: center;
+  }
+}
