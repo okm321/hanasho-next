@@ -1,5 +1,5 @@
 /** 旬の商品 */
-export type SeasonableProductAPI = {
+export type ProductAPI = {
   /** 識別子 */
   id: number
   /** 画像 */
@@ -12,6 +12,12 @@ export type SeasonableProductAPI = {
   price: number
 }
 
+/** 旬の商品取得API */
 export type SeasonableProductAPIRaw = {
-  product_seasonables: SeasonableProductAPI[]
+  product_seasonables: ProductAPI[]
+}
+
+/** 人気商品取得API */
+export type RankingProductAPIRaw = {
+  product_rankings: ProductAPI[]
 }

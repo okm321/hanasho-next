@@ -1,7 +1,7 @@
 'use client'
 
 import { ProductCard } from '@/components/product'
-import { SeasonableProductAPI } from '@/types/product/api'
+import { ProductAPI } from '@/types/product/api'
 import { FC } from 'react'
 import { TopTitle } from '@/components/title'
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
@@ -11,7 +11,7 @@ import Style from './SeasonableProductList.module.scss'
 
 type SeasonProductListProps = {
   /** 旬の商品 */
-  seasonableProducts: SeasonableProductAPI[]
+  seasonableProducts: ProductAPI[]
 }
 
 export const SeasonableProductListInner: FC<SeasonProductListProps> = ({
