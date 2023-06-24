@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { StyleCard } from './StyleCard'
+import { ImageWithText } from './ImageWithText'
 
-type Story = StoryObj<typeof StyleCard>
+type Story = StoryObj<typeof ImageWithText>
 
-const meta: Meta<typeof StyleCard> = {
-  title: 'StyleCard/StyleCard',
-  component: StyleCard,
+const meta: Meta<typeof ImageWithText> = {
+  title: 'CardItem/ImageWithText',
+  component: ImageWithText,
   args: {
     image: '/images/dummy/dummy1.jpeg',
     name: '花束',

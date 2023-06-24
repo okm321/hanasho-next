@@ -1,6 +1,6 @@
 'use client'
 
-import { StyleCard } from '@/components/styleCard'
+import { ImageWithText } from '@/components/cardItem'
 import { TopTitle } from '@/components/title'
 import { TAXON_TYPE_LABEL_MAP } from '@/constants/Taxon'
 import { TaxonAPI, TaxonType } from '@/types'
@@ -20,7 +20,7 @@ export const FindByStyleList: FC<Prop> = ({ taxon }) => {
         {taxon.child_taxons.map((taxon) => {
           return (
             <li key={taxon.id} className={Styles.styleList__item}>
-              <StyleCard
+              <ImageWithText
                 id={taxon.id}
                 image={taxon.icon_image || ''}
                 name={taxon.name}

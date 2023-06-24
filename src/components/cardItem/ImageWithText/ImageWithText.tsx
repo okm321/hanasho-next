@@ -1,9 +1,9 @@
 'use client'
 import Link from 'next/link'
 import { FC } from 'react'
-import Styles from './StyleCard.module.scss'
+import Styles from './ImageWithText.module.scss'
 
-type StyleCardProps = {
+type ImageWithTextProps = {
   /** 画像 */
   image: string
   /** id */
@@ -14,7 +14,12 @@ type StyleCardProps = {
   width?: number
 }
 
-export const StyleCard: FC<StyleCardProps> = ({ image, id, name, width }) => {
+export const ImageWithText: FC<ImageWithTextProps> = ({
+  image,
+  id,
+  name,
+  width,
+}) => {
   return (
     <Link
       href={`/search/${id}?type=style`}
