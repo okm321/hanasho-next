@@ -1,14 +1,14 @@
 @use '@style/global' as g;
 
-.seasonSection {
+.topicSection {
   background-color: g.$color-section-bg;
-  padding: map-get(g.$spaces, 25) 0 0;
+  padding: map-get(g.$spaces, 40) 0 0;
 }
 
-.seasonSectionList {
+.topicList {
   @include g.maxWidthContent;
   &__card {
-    display: flex;
+    width: 320px;
   }
 }
 
@@ -18,8 +18,4 @@
 
 .page {
   background-color: g.$color-slider-pagination-page;
-}
-
-.is-active {
-  background-color: g.$color-slider-pagination-page-active;
 }
