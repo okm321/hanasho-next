@@ -1,0 +1,16 @@
+@use '@style/global' as g;
+
+.card {
+  display: flex;
+  align-items: center;
+  &__img {
+    width: 72px;
+    margin-right: map-get($map: g.$spaces, $key: 1);
+  }
+  &__text {
+    font-size: g.$xSmallFontSize;
+    max-width: 150px;
+    min-width: 150px;
+    white-space: pre-wrap;
+  }
+}

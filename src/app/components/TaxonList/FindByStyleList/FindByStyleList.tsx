@@ -3,7 +3,7 @@
 import { ImageWithText } from '@/components/cardItem'
 import { TopTitle } from '@/components/title'
 import { TAXON_TYPE_LABEL_MAP } from '@/constants/Taxon'
-import { TaxonAPI, TaxonType } from '@/types'
+import { TaxonAPI } from '@/types'
 import { FC } from 'react'
 import Styles from './FindByStyleList.module.scss'
 
@@ -23,7 +23,7 @@ export const FindByStyleList: FC<Prop> = ({ taxon }) => {
               <ImageWithText
                 id={taxon.id}
                 image={taxon.icon_image || ''}
-                name={taxon.name}
+                text={taxon.name}
               />
             </li>
           )

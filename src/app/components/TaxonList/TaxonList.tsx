@@ -1,8 +1,14 @@
 import { fetchTaxons } from '@/app/api'
-import { FindByStyleList } from './FindByStyle'
+import { FindByStyleList } from './FindByStyleList'
 import { TaxonType } from '@/types'
+import { FindByUseList } from './FindByUseList'
 
 export async function TaxonList() {
   const taxons = await fetchTaxons()
-  return <FindByStyleList taxon={taxons[TaxonType.Style - 1]} />
+  return (
+    <>
+      <FindByUseList taxon={taxons[TaxonType.Use - 1]} />
+      <FindByStyleList taxon={taxons[TaxonType.Style - 1]} />
+    </>
+  )
 }

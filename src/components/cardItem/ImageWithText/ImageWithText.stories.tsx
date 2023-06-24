@@ -8,7 +8,7 @@ const meta: Meta<typeof ImageWithText> = {
   component: ImageWithText,
   args: {
     image: '/images/dummy/dummy1.jpeg',
-    name: '花束',
+    text: '花束',
     id: 1,
     width: 230,
   },

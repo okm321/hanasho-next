@@ -1,0 +1,16 @@
+@use '@style/global' as g;
+
+.useSection {
+  background-color: g.$color-section-bg;
+  padding: map-get(g.$spaces, 25) 0 map-get(g.$spaces, 25);
+}
+
+.useList {
+  display: flex;
+  @include g.maxWidthContent(900px);
+  flex-wrap: wrap;
+  &__item {
+    width: 25%;
+    margin: map-get(g.$spaces, 7) 0;
+  }
+}

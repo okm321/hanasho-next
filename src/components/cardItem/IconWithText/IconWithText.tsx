@@ -1,11 +1,11 @@
 'use client'
-import Link from 'next/link'
 import { FC } from 'react'
-import Styles from './ImageWithText.module.scss'
+import Styles from './IconWithText.module.scss'
+import Link from 'next/link'
 
-type ImageWithTextProps = {
-  /** 画像 */
-  image: string
+type IconWithTextProps = {
+  /** アイコン */
+  icon: string
   /** id */
   id: number
   /** テキスト */
@@ -14,20 +14,20 @@ type ImageWithTextProps = {
   width?: number
 }
 
-export const ImageWithText: FC<ImageWithTextProps> = ({
-  image,
+export const IconWithText: FC<IconWithTextProps> = ({
+  icon,
   id,
   text,
   width,
 }) => {
   return (
     <Link
-      href={`/search/${id}?type=style`}
-      className={Styles.card}
+      href={`/search/${id}?type=use`}
       style={{ width }}
+      className={Styles.card}
     >
       <div className={Styles.card__img}>
-        <img src={image} alt={text} />
+        <img src={icon} alt={text} />
       </div>
       <h3 className={Styles.card__text}>{text}</h3>
     </Link>
