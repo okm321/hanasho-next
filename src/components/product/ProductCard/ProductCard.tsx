@@ -19,6 +19,15 @@ type ProductCard = {
   width?: number
   /** 枠線色 */
   borderColor?: string
+  /** ランキング情報 */
+  rankingInfo?: {
+    /** ランキング */
+    ranking: number
+    /** 背景色 */
+    backgroundColor?: string
+    /** 文字色 */
+    textColor?: string
+  }
 }
 
 export const ProductCard: FC<ProductCard> = ({
@@ -29,6 +38,7 @@ export const ProductCard: FC<ProductCard> = ({
   link,
   width = 230,
   borderColor,
+  rankingInfo,
 }) => {
   return (
     <Link
@@ -38,6 +48,17 @@ export const ProductCard: FC<ProductCard> = ({
     >
       <div className={Style.cardBlock__info}>
         <div className={Style.cardInfo}>
+          {rankingInfo && (
+            <div
+              className={Style.cardInfo__ranking}
+              style={{
+                backgroundColor: rankingInfo.backgroundColor || 'black',
+                color: rankingInfo.textColor || 'white',
+              }}
+            >
+              {rankingInfo.ranking}
+            </div>
+          )}
           <div className={Style.cardInfo__img}>
             <img src={image} alt={name} />
           </div>

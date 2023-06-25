@@ -26,7 +26,7 @@ export const HeaderButtonInner: FC<HeaderButtonInnerProps> = ({
   return (
     <>
       <div className={Style.buttonItem__img}>
-        <img src={icon} className={Style.icon} />
+        <img src={icon} className={Style.icon} alt={label} />
         {count && <div className={Style.count}>{count}</div>}
       </div>
       <div className={Style.buttonItem__text}>{label}</div>

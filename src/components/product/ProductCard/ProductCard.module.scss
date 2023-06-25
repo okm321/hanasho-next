@@ -19,6 +19,18 @@
 
 .cardInfo {
   font-size: g.$xSmallFontSize;
+  position: relative;
+  &__ranking {
+    border-radius: 50%;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    top: 2%;
+    left: 3%;
+    font-weight: bold;
+  }
   &__img {
     height: 100%;
   }

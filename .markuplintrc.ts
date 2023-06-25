@@ -14,6 +14,18 @@ const config: Config = {
     '**/node_modules/**',
     '**/dist/**',
   ],
+  rules: {
+    'required-attr': true,
+  },
+  nodeRules: [
+    {
+      selector: 'img',
+      rules: {
+        /** heightとwidth属性のエラーを回避するため */
+        'required-attr': 'alt',
+      },
+    },
+  ],
 }
 
 export default config

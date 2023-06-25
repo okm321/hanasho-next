@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { SeasonableProductList } from './components/SeasonProductList'
 import { TopArticle } from './components/TopArticle'
 import { TaxonList } from './components/TaxonList'
+import { RankingProductList } from './components/RankingProductList'
 
 export default async function Home() {
   return (
@@ -13,6 +14,9 @@ export default async function Home() {
         <SeasonableProductList />
       </Suspense>
       <Suspense fallback={<div>Loading3...</div>}>
+        <RankingProductList />
+      </Suspense>
+      <Suspense fallback={<div>Loading4...</div>}>
         <TaxonList />
       </Suspense>
     </div>

@@ -18,3 +18,12 @@ const meta: Meta<typeof ProductCard> = {
 export default meta
 
 export const Base: Story = {}
+
+export const WithRanking: Story = {}
+WithRanking.args = {
+  rankingInfo: {
+    ranking: 1,
+    backgroundColor: '#e5d223',
+    textColor: 'white',
+  },
+}

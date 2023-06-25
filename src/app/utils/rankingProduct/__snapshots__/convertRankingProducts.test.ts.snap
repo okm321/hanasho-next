@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convertRankingProducts 人気ランキングのデータが3個以上の場合 1`] = `
+[
+  {
+    "id": 1,
+    "list_image": "https://example.com/image1.jpg",
+    "name": "商品1",
+    "price": 1000,
+    "rankingInfo": {
+      "backgroundColor": "#e5d223",
+      "ranking": 1,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル1",
+  },
+  {
+    "id": 2,
+    "list_image": "https://example.com/image2.jpg",
+    "name": "商品2",
+    "price": 2000,
+    "rankingInfo": {
+      "backgroundColor": "#b1b1b1",
+      "ranking": 2,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル2",
+  },
+  {
+    "id": 3,
+    "list_image": "https://example.com/image3.jpg",
+    "name": "商品3",
+    "price": 3000,
+    "rankingInfo": {
+      "backgroundColor": "#b77437",
+      "ranking": 3,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル3",
+  },
+  {
+    "id": 4,
+    "list_image": "https://example.com/image4.jpg",
+    "name": "商品4",
+    "price": 4000,
+    "rankingInfo": {
+      "backgroundColor": "black",
+      "ranking": 4,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル4",
+  },
+  {
+    "id": 5,
+    "list_image": "https://example.com/image5.jpg",
+    "name": "商品5",
+    "price": 5000,
+    "rankingInfo": {
+      "backgroundColor": "black",
+      "ranking": 5,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル5",
+  },
+  {
+    "id": 6,
+    "list_image": "https://example.com/image6.jpg",
+    "name": "商品6",
+    "price": 6000,
+    "rankingInfo": {
+      "backgroundColor": "black",
+      "ranking": 6,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル6",
+  },
+  {
+    "id": 7,
+    "list_image": "https://example.com/image7.jpg",
+    "name": "商品7",
+    "price": 7000,
+    "rankingInfo": {
+      "backgroundColor": "black",
+      "ranking": 7,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル7",
+  },
+  {
+    "id": 8,
+    "list_image": "https://example.com/image8.jpg",
+    "name": "商品8",
+    "price": 8000,
+    "rankingInfo": {
+      "backgroundColor": "black",
+      "ranking": 8,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル8",
+  },
+  {
+    "id": 9,
+    "list_image": "https://example.com/image9.jpg",
+    "name": "商品9",
+    "price": 9000,
+    "rankingInfo": {
+      "backgroundColor": "black",
+      "ranking": 9,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル9",
+  },
+  {
+    "id": 10,
+    "list_image": "https://example.com/image10.jpg",
+    "name": "商品10",
+    "price": 10000,
+    "rankingInfo": {
+      "backgroundColor": "black",
+      "ranking": 10,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル10",
+  },
+]
+`;
+
+exports[`convertRankingProducts 人気ランキングのデータが3個以内の場合 1`] = `
+[
+  {
+    "id": 1,
+    "list_image": "https://example.com/image1.jpg",
+    "name": "商品1",
+    "price": 1000,
+    "rankingInfo": {
+      "backgroundColor": "#e5d223",
+      "ranking": 1,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル1",
+  },
+  {
+    "id": 2,
+    "list_image": "https://example.com/image2.jpg",
+    "name": "商品2",
+    "price": 2000,
+    "rankingInfo": {
+      "backgroundColor": "#b1b1b1",
+      "ranking": 2,
+      "textColor": "white",
+    },
+    "subtitle": "サブタイトル2",
+  },
+]
+`;
