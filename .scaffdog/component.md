@@ -9,6 +9,9 @@ questions:
   story:
     confirm: 'Storybookは必要ですか？'
     initial: true
+  scss:
+    confirm: 'Scssファイルは要る？'
+    initial: true
   test:
     confirm: 'テストは必要ですか？'
     initial: true
@@ -55,6 +58,13 @@ export default meta
 export const Base: Story = {
   args: {},
 }
+
+```
+
+# `{{ !inputs.scss && '!' }}{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.module.scss`
+
+```scss
+@use '@style/global' as g;
 
 ```
 
