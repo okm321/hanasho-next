@@ -1,28 +1,27 @@
 ---
 name: 'component'
-root: '.'
+root: 'src'
 output:
-  - './src'
+  - '**/*'
 questions:
-  output_path: 'Please enter an output directory.'
-  category: 'Please enter a category name. (features name)'
-  name: 'Please enter a component name.'
+  category: 'カテゴリー名を入力してください（Storybookで使用します）'
+  name: 'コンポーネント名を入れてください'
   story:
-    confirm: 'Do you need a story?'
+    confirm: 'Storybookは必要ですか？'
     initial: true
   test:
-    confirm: 'Do you need a test?'
+    confirm: 'テストは必要ですか？'
     initial: true
 ---
 
-# `{{ inputs.output_path }}/{{ inputs.name | pascal }}/index.ts`
+# `{{ inputs.name | pascal }}/index.ts`
 
 ```typescript
 export * from './{{ inputs.name | pascal }}'
 
 ```
 
-# `{{ inputs.output_path }}/{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.tsx`
+# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.tsx`
 
 ```typescript
 import { FC } from 'react'
@@ -37,7 +36,7 @@ export const {{ inputs.name | pascal }}: FC<Props> = () => {
 
 ```
 
-# `{{ !inputs.story && '!' }}{{ inputs.output_path }}/{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.stories.tsx`
+# `{{ !inputs.story && '!' }}{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.stories.tsx`
 
 ```typescript
 import type { Meta, StoryObj } from '@storybook/react'
@@ -59,7 +58,7 @@ export const Base: Story = {
 
 ```
 
-# `{{ !inputs.test && '!' }}{{ inputs.output_path }}/{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.test.tsx`
+# `{{ !inputs.test && '!' }}{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.test.tsx`
 
 ```typescript
 import { composeStories } from '@storybook/testing-react'
