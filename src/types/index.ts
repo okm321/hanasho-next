@@ -1,4 +1,5 @@
 export * from './header'
+export * from './pageMap'
 export * from './product'
 export * from './slide'
 export * from './taxon'
