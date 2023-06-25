@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`omitNullableHandler omitNullable to A,B,C,null,undefined 1`] = `
+[
+  "A",
+  "B",
+  "C",
+]
+`;

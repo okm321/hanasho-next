@@ -2,7 +2,6 @@
 
 import { ImageWithText } from '@/components/cardItem'
 import { TopTitle } from '@/components/title'
-import { TAXON_TYPE_LABEL_MAP } from '@/constants/Taxon'
 import { TaxonAPI } from '@/types'
 import { FC } from 'react'
 import Styles from './FindByStyleList.module.scss'
@@ -15,7 +14,7 @@ type Prop = {
 export const FindByStyleList: FC<Prop> = ({ taxon }) => {
   return (
     <section className={Styles.styleSection}>
-      <TopTitle title={TAXON_TYPE_LABEL_MAP[taxon.id]} />
+      <TopTitle title={taxon.name} />
       <ul className={Styles.styleList}>
         {taxon.child_taxons.map((taxon) => {
           return (

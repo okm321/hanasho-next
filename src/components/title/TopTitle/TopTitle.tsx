@@ -10,8 +10,8 @@ type TopTitleProp = {
 
 export const TopTitle: FC<TopTitleProp> = ({ title }) => {
   return (
-    <div className={Style.title}>
-      <h2 className={Style.title__text}>{title}</h2>
-    </div>
+    <h2 className={Style.title}>
+      <span className={Style.title__text}>{title}</span>
+    </h2>
   )
 }

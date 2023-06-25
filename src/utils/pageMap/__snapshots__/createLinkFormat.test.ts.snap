@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createLinkFormat スタイルでさがす場合 1`] = `"/search/1?type=style"`;
+
+exports[`createLinkFormat メニューの場合 1`] = `"/"`;
+
+exports[`createLinkFormat 例外の場合 1`] = `undefined`;
+
+exports[`createLinkFormat 特集でさがす場合 1`] = `"/search/topic/1"`;
+
+exports[`createLinkFormat 用途でさがす場合 1`] = `"/search/1?type=use"`;

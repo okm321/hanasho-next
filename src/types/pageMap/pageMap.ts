@@ -1,15 +1,15 @@
 import { PAGE_MAP_CATEGORY_NAME_MAP } from '@/constants'
 
-/** フッターナビゲーションの種類 */
+/** ページマップの種類 */
 export const PageMapCategory = {
   /** 用途でさがす */
-  Use: 0,
+  Use: 1,
   /** スタイルでさがす */
-  Style: 1,
+  Style: 2,
   /** 特集でさがす */
-  Topic: 2,
+  Topic: 3,
   /** メニュー */
-  Menu: 3,
+  Menu: 4,
 } as const
 export type PageMapCategory =
   (typeof PageMapCategory)[keyof typeof PageMapCategory]
@@ -17,8 +17,8 @@ export type PageMapCategory =
 export type PageMapCategoryName =
   (typeof PAGE_MAP_CATEGORY_NAME_MAP)[keyof typeof PAGE_MAP_CATEGORY_NAME_MAP]
 
-/** フッターのナビゲーション */
-export type FooterNavigation = {
+/** ページマップ */
+export type PageMap = {
   /** カテゴリーID */
   id: PageMapCategory
   /** カテゴリー名 */
@@ -29,5 +29,7 @@ export type FooterNavigation = {
     id: number
     /** ラベル */
     label: string
+    /** リンク先 */
+    link: string
   }[]
 }

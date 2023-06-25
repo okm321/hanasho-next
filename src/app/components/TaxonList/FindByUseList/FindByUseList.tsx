@@ -4,7 +4,6 @@ import { IconWithText } from '@/components/cardItem'
 import { TopTitle } from '@/components/title'
 import { TaxonAPI } from '@/types'
 import { FC } from 'react'
-import { TAXON_TYPE_LABEL_MAP } from '@/constants/Taxon'
 import Styles from './FindByUseList.module.scss'
 
 type Prop = {

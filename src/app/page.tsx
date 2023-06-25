@@ -3,6 +3,7 @@ import { SeasonableProductList } from './components/SeasonProductList'
 import { TopArticle } from './components/TopArticle'
 import { TaxonList } from './components/TaxonList'
 import { RankingProductList } from './components/RankingProductList'
+import { PageMap } from '@/components/PageMap'
 
 export default async function Home() {
   return (
@@ -18,6 +19,9 @@ export default async function Home() {
       </Suspense>
       <Suspense fallback={<div>Loading4...</div>}>
         <TaxonList />
+      </Suspense>
+      <Suspense fallback={<div>Loading5...</div>}>
+        <PageMap />
       </Suspense>
     </div>
   )
