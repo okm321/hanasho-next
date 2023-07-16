@@ -6,7 +6,9 @@
   "scripts": {
     "build": "next build",
     "build-storybook": "storybook build",
-    "dev": "yarn install && next dev",
+    "dev": "yarn install && run-p dev:next dev:scss",
+    "dev:next": "next dev",
+    "dev:scss": "typed-scss-modules src --watch",
     "fmtpackagejson": "sort-package-json 'package.json' 'apps/*/package.json' 'packages/*/package.json'",
     "fmtpackagejsoncheck": "yarn fmtpackagejson --check",
     "fmtprettier": "yarn fmtprettierbase --write",
@@ -21,7 +23,8 @@
     "scaffdog": "scaffdog generate",
     "start": "next start",
     "storybook": "storybook dev -p 6006",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests",
+    "typegen:scss": "typed-scss-modules src"
   },
   "lint-staged": {
     "*.{js,ts,tsx,json,md,html,yml}": [
@@ -94,6 +97,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "lint-staged": "^13.2.2",
     "markuplint": "^3.10.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.8.4",
     "prop-types": "^15.8.1",
     "sass": "^1.62.1",
@@ -105,6 +109,7 @@
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "tsd": "^0.28.1",
+    "typed-scss-modules": "^7.1.1",
     "typescript": "^5.1.3"
   },
   "engines": {

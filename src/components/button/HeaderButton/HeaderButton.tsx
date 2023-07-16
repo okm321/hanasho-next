@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import Style from './HeaderButton.module.scss'
+import Styles from './HeaderButton.module.scss'
 import Link from 'next/link'
 
 type HeaderButtonInnerProps = {
@@ -25,11 +25,11 @@ export const HeaderButtonInner: FC<HeaderButtonInnerProps> = ({
 }) => {
   return (
     <>
-      <div className={Style.buttonItem__img}>
-        <img src={icon} className={Style.icon} alt={label} />
-        {count && <div className={Style.count}>{count}</div>}
+      <div className={Styles.buttonItem__img}>
+        <img src={icon} className={Styles.icon} alt={label} />
+        {count && <div className={Styles.count}>{count}</div>}
       </div>
-      <div className={Style.buttonItem__text}>{label}</div>
+      <div className={Styles.buttonItem__text}>{label}</div>
     </>
   )
 }
@@ -44,8 +44,8 @@ export const HeaderButton: FC<HeaderButtonProps> = ({
   if (link == null)
     return (
       <button
-        className={`${Style.buttonItem} ${
-          colorReverse ? Style.buttonItemReverse : ''
+        className={`${Styles.buttonItem} ${
+          colorReverse ? Styles.buttonItemReverse : ''
         }`}
       >
         <HeaderButtonInner label={label} icon={icon} count={count} />
@@ -54,8 +54,8 @@ export const HeaderButton: FC<HeaderButtonProps> = ({
   return (
     <Link
       href={link}
-      className={`${Style.buttonItem} ${
-        colorReverse ? Style.buttonItemReverse : ''
+      className={`${Styles.buttonItem} ${
+        colorReverse ? Styles.buttonItemReverse : ''
       }`}
     >
       <HeaderButtonInner label={label} icon={icon} count={count} />

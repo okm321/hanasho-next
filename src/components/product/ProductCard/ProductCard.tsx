@@ -1,7 +1,7 @@
 'use client'
 
 import { FC } from 'react'
-import Style from './ProductCard.module.scss'
+import Styles from './ProductCard.module.scss'
 import Link from 'next/link'
 
 type ProductCard = {
@@ -43,14 +43,14 @@ export const ProductCard: FC<ProductCard> = ({
   return (
     <Link
       href={link}
-      className={Style.cardBlock}
+      className={Styles.cardBlock}
       style={{ borderColor, width }}
     >
-      <div className={Style.cardBlock__info}>
-        <div className={Style.cardInfo}>
+      <div>
+        <div className={Styles.cardInfo}>
           {rankingInfo && (
             <div
-              className={Style.cardInfo__ranking}
+              className={Styles.cardInfo__ranking}
               style={{
                 backgroundColor: rankingInfo.backgroundColor || 'black',
                 color: rankingInfo.textColor || 'white',
@@ -59,14 +59,14 @@ export const ProductCard: FC<ProductCard> = ({
               {rankingInfo.ranking}
             </div>
           )}
-          <div className={Style.cardInfo__img}>
+          <div className={Styles.cardInfo__img}>
             <img src={image} alt={name} />
           </div>
-          <h3 className={Style.cardInfo__subtitle}>{subtitle}</h3>
-          <h4 className={Style.cardInfo__name}>{name}</h4>
+          <h3 className={Styles.cardInfo__subtitle}>{subtitle}</h3>
+          <h4 className={Styles.cardInfo__name}>{name}</h4>
         </div>
       </div>
-      <h4 className={Style.cardBlock__price}>¥{price.toLocaleString()}</h4>
+      <h4 className={Styles.cardBlock__price}>¥{price.toLocaleString()}</h4>
     </Link>
   )
 }

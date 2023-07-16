@@ -32,7 +32,6 @@ export const FindByTopicList: FC<Prop> = ({ taxon }) => {
           classes: {
             pagination: `splide__pagination  ${Styles.pagination}`,
             page: `splide__pagination__page ${Styles.page}`,
-            isActive: `is-active ${Styles.isActive}`,
           },
         }}
         className={Styles.topicList}

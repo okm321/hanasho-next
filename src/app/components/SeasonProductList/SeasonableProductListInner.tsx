@@ -7,7 +7,7 @@ import { TopTitle } from '@/components/title'
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import '@splidejs/react-splide/css/core'
-import Style from './SeasonableProductList.module.scss'
+import Styles from './SeasonableProductList.module.scss'
 
 type SeasonProductListProps = {
   /** 旬の商品 */
@@ -18,7 +18,7 @@ export const SeasonableProductListInner: FC<SeasonProductListProps> = ({
   seasonableProducts,
 }) => {
   return (
-    <section className={Style.seasonSection}>
+    <section className={Styles.seasonSection}>
       <TopTitle title="旬の商品" />
       <Splide
         tag="section"
@@ -34,19 +34,18 @@ export const SeasonableProductListInner: FC<SeasonProductListProps> = ({
           gap: '.5em',
           trimSpace: true,
           classes: {
-            pagination: `splide__pagination  ${Style.pagination}`,
-            page: `splide__pagination__page ${Style.page}`,
-            isActive: `is-active ${Style.isActive}`,
+            pagination: `splide__pagination  ${Styles.pagination}`,
+            page: `splide__pagination__page ${Styles.page}`,
           },
         }}
-        className={Style.seasonSectionList}
+        className={Styles.seasonSectionList}
       >
         <SplideTrack>
           {seasonableProducts.map((product) => {
             return (
               <SplideSlide
                 key={product.id}
-                className={Style.seasonSectionList__card}
+                className={Styles.seasonSectionList__card}
               >
                 <ProductCard
                   key={product.id}
